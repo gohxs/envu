@@ -6,7 +6,10 @@ import (
 	"strconv"
 )
 
-// Getenv environment or default
+// Getenv environment or default:
+//  type will be defined by def parameter
+//  var port int
+//  envu.Getenv("PORT",80,&port)
 func Getenv(key string, def interface{}, to interface{}) error {
 
 	val := reflect.ValueOf(to)
